@@ -23,9 +23,10 @@ class FoodTypeController extends AdminController
         $tree = new Tree(new FoodType);
 
         return $content
-            ->header('Food Type')
+            ->header('Food Category')
             ->body($tree);
     }
+
     /**
      * Make a show builder.
      *

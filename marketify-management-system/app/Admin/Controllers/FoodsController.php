@@ -81,9 +81,6 @@ class FoodsController extends AdminController
         $form->number('selected_people', __('Selected'));
         $form->image('img', __('Thumbnail'))->uniqueName();
         $form->UEditor('description','Description');
-
-
-
         return $form;
     }
 }
