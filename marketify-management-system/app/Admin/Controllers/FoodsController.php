@@ -31,6 +31,8 @@ class FoodsController extends AdminController
     {
         $grid = new Grid(new Food());
 
+        // show the latest product added to the grid
+        $grid->model()->latest();
         $grid->column('id', __('Id'));
         $grid->column('name', __('Name'));
          $grid->column('FoodType.title', __('Category'));
