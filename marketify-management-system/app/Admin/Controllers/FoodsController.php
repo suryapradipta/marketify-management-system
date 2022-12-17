@@ -33,7 +33,7 @@ class FoodsController extends AdminController
 
         // show the latest product added to the grid
         $grid->model()->latest();
-        $grid->column('id', __('Id'));
+        $grid->column('id', __('ID'));
         $grid->column('name', __('Name'));
          $grid->column('FoodType.title', __('Category'));
         $grid->column('price', __('Price'));
@@ -75,7 +75,7 @@ class FoodsController extends AdminController
     {
         $form = new Form(new Food());
         $form->text('name', __('Name'));
-          $form->select('type_id', __('Type_id'))->options((new FoodType())::selectOptions());
+          $form->select('type_id', __('Category_ID'))->options((new FoodType())::selectOptions());
         $form->number('price', __('Price'));
         $form->text('location', __('Location'));
         $form->number('stars', __('Stars'));
